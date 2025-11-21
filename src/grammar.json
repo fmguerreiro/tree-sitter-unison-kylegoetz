@@ -22,6 +22,15 @@
             "type": "ALIAS",
             "content": {
               "type": "SYMBOL",
+              "name": "documented_binding"
+            },
+            "named": true,
+            "value": "term_declaration"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
               "name": "binding"
             },
             "named": true,
@@ -30,6 +39,10 @@
           {
             "type": "SYMBOL",
             "name": "fold"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "documented_use_clause"
           },
           {
             "type": "SYMBOL",
@@ -312,28 +325,19 @@
       }
     },
     "binding": {
+      "type": "SYMBOL",
+      "name": "_binding"
+    },
+    "documented_binding": {
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "doc_block"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_layout_semicolon"
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "doc_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_layout_semicolon"
         },
         {
           "type": "SYMBOL",
@@ -3943,6 +3947,23 @@
           }
         ]
       }
+    },
+    "documented_use_clause": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "doc_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_layout_semicolon"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "use_clause"
+        }
+      ]
     },
     "do": {
       "type": "STRING",

@@ -1660,6 +1660,25 @@
     }
   },
   {
+    "type": "documented_use_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "doc_block",
+          "named": true
+        },
+        {
+          "type": "use_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "effect",
     "named": true,
     "fields": {},
@@ -8181,6 +8200,10 @@
       "types": [
         {
           "type": "ability_declaration",
+          "named": true
+        },
+        {
+          "type": "documented_use_clause",
           "named": true
         },
         {
